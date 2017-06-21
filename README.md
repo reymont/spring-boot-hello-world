@@ -11,3 +11,9 @@ cd target
 docker build -t jmx-hello .
 docker run -d -p 10001:10001 --restart=always --name=jh jmx-hello
 ```
+
+You can use https://github.com/reymont/jvmviewer to get information.
+
+```
+http://<jolokia>:8080/jvmviewer/jolokia.html?ip=<jmx_server>&port=10001
+```

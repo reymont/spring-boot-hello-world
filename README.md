@@ -5,8 +5,9 @@ This sample Spring Boot application was written for a blog post describing how t
 http://patrickgrimard.com/2014/08/14/how-to-build-a-spring-boot-application-using-intellij-idea/
 
 #ADD Dockerfile demo
-
+```
 mvm clean package
 cd target
 docker build -t jmx-hello .
 docker run -d -p 10001:10001 --restart=always --name=jh jmx-hello
+```

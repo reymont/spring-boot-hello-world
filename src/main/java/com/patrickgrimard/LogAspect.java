@@ -28,7 +28,10 @@ public class LogAspect {
         // 记录下请求内容  
         System.out.println("URL : " + request.getRequestURL().toString());  
         System.out.println("HTTP_METHOD : " + request.getMethod());  
-        System.out.println("IP : " + request.getRemoteAddr());  
+        System.out.println("RemoteIP : " + request.getRemoteAddr());
+        System.out.println("RemotePort : " + request.getRemotePort());
+        System.out.println("LocalIP : " + request.getLocalAddr());
+        System.out.println("LocalPort : " + request.getLocalPort());
         System.out.println("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());  
         System.out.println("ARGS : " + Arrays.toString(joinPoint.getArgs()));  
   

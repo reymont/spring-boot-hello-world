@@ -21,5 +21,9 @@ http://<jolokia>:8080/jvmviewer/jolokia.html?ip=<jmx_server>&port=10001
 
 # aop
 
-`http://localhost:8080/first`
-`http://localhost:8080/doError`
+* 正常执行
+  * `http://localhost:8080/first`
+* 抛出异常
+  * `http://localhost:8080/doError`
+* 带参数
+  * `http://172.20.54.95:8080/hello?name=reymont`

@@ -1,5 +1,6 @@
 package com.patrickgrimard;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;  
   
@@ -8,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
  * 
  */  
 @RestController  
-public class FirstController {  
+public class FirstController {
+    @Autowired
+    private IHelloSevice helloSevice;
   
     @RequestMapping("/first")  
     public Object first() {  
@@ -18,5 +21,10 @@ public class FirstController {
     @RequestMapping("/doError")  
     public Object error() {  
         return 1 / 0;  
-    }  
+    }
+
+    @RequestMapping("/hello")
+    public Object hello(String name){
+        return helloSevice.say(name);
+    }
 }  

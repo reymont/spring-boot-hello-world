@@ -17,3 +17,9 @@ You can use https://github.com/reymont/jvmviewer to get information.
 ```
 http://<jolokia>:8080/jvmviewer/jolokia.html?ip=<jmx_server>&port=10001
 ```
+
+
+# aop
+
+`http://localhost:8080/first`
+`http://localhost:8080/doError`
